@@ -14,4 +14,4 @@ const UserInfo = ({nome,image, percentual}) => {
   )
 }
 
-export { UserInfo }
+export default UserInfo;

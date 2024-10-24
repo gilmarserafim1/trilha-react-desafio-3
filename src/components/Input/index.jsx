@@ -19,4 +19,4 @@ const Input = ({leftIcon, name, control, ...rest}) => {
   )
 }
 
-export { Input }; 
+export default Input; 

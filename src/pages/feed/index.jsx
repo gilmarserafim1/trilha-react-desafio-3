@@ -1,8 +1,7 @@
 import React from 'react'
-import { Card } from '../../components/Card';
-import { UserInfo } from '../../components/UserInfo';
-
-import { Header } from '../../components/Header';
+import Card from '../../components/Card';
+import UserInfo from '../../components/UserInfo';
+import Header from '../../components/Header';
 
 import { Container, Column, Title, TitleHighlight } from './styles';
 
@@ -36,4 +35,4 @@ const Feed = () => {
   )
 }
 
-export { Feed }; 
+export default Feed; 

@@ -1,30 +1,31 @@
 import styled, {css}  from 'styled-components';
 
 export const ButtonContainer = styled.button`
-    background: #565656;
+    height: 30px;
     border-radius: 22px;
-    position: relative;
-
     color: #FFFFFF;
     padding: 2px 12px;
-    min-width: 120px;
-    width: 100%;
+    border: none;
     
-    ${({variant}) => variant !== "primary" && css`
-        min-width: 167px;
-        height: 33px;
-        
+    ${({variant}) => variant === "primary" && css` 
         background: #E4105D;
-
-        &::after {
-            content: '';
-            position: absolute;
-            border: 1px solid #E4105D;
-            top: -5px;
-            left: -6px;
-            width: calc(100% + 10px);
-            height: calc(100% + 10px);
-            border-radius: 22px;
-        }
+        width: 100%;
+        margin: 0;
     `}
-`
+    ${({variant}) => variant === "secondary" && css` 
+        background: #565656;
+        width: 120px;
+        margin: 0 5px;
+    `}
+    ${({variant}) => variant === "menu" && css` 
+        background: transparent;
+        color: white;
+        width: 100px;
+        margin: 0 5px;
+    `}
+
+    &:hover {
+        cursor: pointer;
+        filter: opacity(.9)
+    }
+`;

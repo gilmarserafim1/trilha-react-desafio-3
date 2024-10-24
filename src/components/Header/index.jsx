@@ -1,39 +1,56 @@
 import React from 'react'
 import logo from '../../assets/logo-dio.png';
-
-import { Button } from '../Button';
-
-import { Container, Wrapper, BuscarInputContainer, Input, Row, Menu, MenuRight, UserPicture} from './styles';
+import Button from '../Button';
+import { Wrapper, BuscarInputContainer, Input, UserPicture, Left, Right, Logo} from './styles';
+import StyledLink from '../StyledLink'
+import { FaSearch, FaChevronDown } from "react-icons/fa";
 
 const Header = ({autenticado}) => {
   return (
     <Wrapper>
-      <Container>
-          <Row>
-            <img src={logo} alt="Logo da dio"/>
-            {autenticado ? (
-              <>
-               <BuscarInputContainer>
-                <Input placeholder='Buscar...'/>
-               </BuscarInputContainer>
-                <Menu>Live Code</Menu>
-                <Menu>Global</Menu>
-              </>
-            ) : null}
-          </Row>
-          <Row>
-              {autenticado ? (
-                <UserPicture src="https://avatars.githubusercontent.com/u/45184516?v=4"/>
-              ) : (
-              <>
-                <MenuRight href="/">Home</MenuRight>
-                <Button title="Entrar" />
-                <Button title="Cadastrar" />
-              </>)}
-          </Row>
-      </Container>
+      <Left>
+
+        <StyledLink to='/'>
+          <Logo src={logo} alt="Logo da dio"/>
+        </StyledLink>
+
+        {autenticado ? (
+          <>
+            <BuscarInputContainer>
+              <FaSearch />
+              <Input placeholder='BUSCAR'/>
+            </BuscarInputContainer>
+
+            <Button variant='menu' title="Live Code" />
+            <Button variant='menu' title="Global" />
+          </>
+        ) : null}
+      </Left>
+
+      <Right>
+        {autenticado ? (
+          <>
+            <UserPicture src="https://avatars.githubusercontent.com/u/45184516?v=4"/>
+            <FaChevronDown />
+          </>            
+        ) : (
+          <>
+            <StyledLink to='/'>
+              <Button variant='menu' title="Home"/>
+            </StyledLink>
+
+            <StyledLink to='/login'>
+              <Button variant='secondary' title="Entrar" />
+            </StyledLink>
+            
+            <StyledLink to='/cadastro'>
+              <Button variant='secondary' title="Cadastrar" />
+            </StyledLink>          
+          </>
+        )}
+      </Right>
     </Wrapper>
-  )
+  );
 }
 
-export { Header }
+export default Header;

@@ -1,31 +1,32 @@
 import styled  from 'styled-components';
 
-export const Container = styled.div`
-   
+export const Wrapper = styled.nav`   
     width: 100%;
-    max-width: 80%;
-    height: 47px;
-
+    height: 50px;
+    background-color: #151515;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
 `
 
-export const Row = styled.div`
+export const Left = styled.div`
+    display:flex;
+    align-items: center;
+    margin-left: 50px;
+`;
+
+export const Logo = styled.img`
+    width: auto;
+    height: 30px;
+`;
+
+
+export const Right = styled.div`
     display:flex;
     flex-direction: row;
     align-items: center;
+    margin-right: 50px;
 `;
-
-export const Wrapper = styled.div`
-    background-color: #151515;
-    width: 100%;
-    height: 47px;
-    display:flex
-    justify-content: center;
-    align-items: center
-`
 
 export const BuscarInputContainer = styled.div`
     width: 275px;
@@ -34,40 +35,31 @@ export const BuscarInputContainer = styled.div`
     border-radius: 8px;
     padding: 2px 5px;
     margin: 0 12px;
-
     display:flex;
-`
+    align-items: center;
+`;
 
-export const Menu = styled.a`
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 25px;
-    color: #FFFFFF;
-    margin-right: 12px;
-`
 
-export const MenuRight = styled.a`
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-size: 12px;
-    line-height: 25px;
-    color: #FFFFFF;
-    margin-right: 12px;
-    text-decoration: none;
-`
+export const Input = styled.input`
+    width: 100%;
+    background: transparent;
+    border: 0;
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        color: white;
+        font-size: 15px;
+    }
+`;
 
 export const UserPicture = styled.img`
     width: 32px;
     height: 32px;
     border-radius: 22px;
     border: 3px solid #FFFFFF;
-`
-
-export const Input = styled.input`
-    background: transparent;
-    flex: 1;
-    border: 0;
-    color: #FFFFFF;
-`
+    margin-right: 5px;
+`;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.main`
     width: 100%;
@@ -11,7 +11,7 @@ export const Container = styled.main`
 export const Left = styled.div`
     display: flex;
     flex-direction: column;
-    width: 580px;
+    width: 400px;
 `;
 
 export const Right = styled.div`
@@ -30,32 +30,18 @@ export const Row = styled.div`
     margin: 0;
 `;
 
-export const RowSenha = styled(Row)`
-   color: red;
-`;
-
-export const EsqueciText  = styled.p`
+export const JaTenhoConta  = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-    color: #E5E044;
-    &:hover {
-        cursor: pointer;
-        filter: opacity(.9)
-    }
-`;
-
-export const CriarText =  styled.p`
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 19px;
-    color: #23DD7A;
-    &:hover {
-        cursor: pointer;
-        filter: opacity(.9)
+    color: #FFFFFF;
+    span {
+        color: #23DD7A;
+        &:hover {
+            cursor: pointer;
+            filter: opacity(.9)
+        }
     }
 `;
